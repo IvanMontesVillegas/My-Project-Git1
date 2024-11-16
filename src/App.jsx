@@ -1,16 +1,22 @@
-import { useState } from 'react'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Home from './views/Home/Home';
 
 import './App.css'
+import Login from './views/Sing-in/Sing-in';
+
 
 function App() {
   
 
   return (
-    <>
-     <h1 className="text-3xl font-bold underline bg-red-800">hola desde la primera clase</h1>
-    
-
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/sing-in" element={<Login />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
