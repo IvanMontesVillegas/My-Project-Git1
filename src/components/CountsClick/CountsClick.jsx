@@ -3,20 +3,20 @@ import "./Count.css";
 
 function CountsClick() {
   
-  const [contar, estamosContando] = useState(0);
+  const [count, setCount] = useState(0);
   
   const contandoClicks = () => {
-    estamosContando(contar + 1);
+    setCount(contar + 1);
   }
 
   const handleReset = () => {
-    estamosContando(0);
+    setCount(0);
   }
 
 
   return (
     <div className="counter-container">
-        <h1 className="counter">{contar}</h1>
+        <h1 className="counter">{count}</h1>
         <button className="button count-button" onClick={contandoClicks}>
             Contar
         </button>
