@@ -7,6 +7,7 @@ import './App.css'
 import Login from './views/Sing-in/Sing-in';
 import CountsClick from './components/CountsClick/CountsClick';
 import AboutUs from './views/About-us/About-us';
+import UserPage from './views/UserPage/UserPage';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/sing-in" element={<Login />}/>
+        <Route path="/user" element={<UserPage />}/>
         <Route path="/contador" element={<CountsClick />}/>
         <Route path="/acerca-de-nosotros" element={<AboutUs />}/>
       </Routes>
