@@ -21,10 +21,12 @@ function Login() {
     e.preventDefault();
     const usuarioEncontrado = usuarios.find(
         (usuario) => usuario.correo === email && usuario.password === password
+        
     );
 
     if (usuarioEncontrado){
-        console.log("usuario encontrado");
+        console.log(`Bienvenido,${usuarioEncontrado.nombre}`);
+        navigate("/user", { state: { nombre: usuarioEncontrado.nombre } });
     } else{
         console.log("Correo o contraseña incorrectos");
     }
@@ -57,7 +59,7 @@ function Login() {
                 htmlFor=""
                 className="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
                 <input 
-                type="text"
+                type="password"
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
