@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import "./Count.css";
+import Nav from '../../components/Nav/Nav'
 
 function CountsClick() {
   
@@ -15,7 +16,9 @@ function CountsClick() {
 
 
   return (
-    <div className="counter-container">
+    <div>
+      <Nav />
+      <div className="counter-container">
         <h1 className="counter">{count}</h1>
         <button className="button count-button" onClick={contandoClicks}>
             Contar
@@ -23,6 +26,7 @@ function CountsClick() {
         <button className="button reset-button" onClick={handleReset}>
             Reiniciar
         </button>
+    </div>
     </div>
   )
 }

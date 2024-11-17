@@ -5,6 +5,8 @@ import Home from './views/Home/Home';
 
 import './App.css'
 import Login from './views/Sing-in/Sing-in';
+import CountsClick from './components/CountsClick/CountsClick';
+import AboutUs from './views/About-us/About-us';
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/sing-in" element={<Login />}/>
+        <Route path="/contador" element={<CountsClick />}/>
+        <Route path="/acerca-de-nosotros" element={<AboutUs />}/>
       </Routes>
     </BrowserRouter>
   )
